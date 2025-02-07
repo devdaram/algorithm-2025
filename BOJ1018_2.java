@@ -36,7 +36,7 @@ public class BOJ1018_2 {
                 // 8인 길이만큼 돌면서 바꿔야 할 색깔 있는지 확인
                 for (int x = i; x < endX; x++) {
                     for (int y = j; y < endY; y++) {
-                        if (startColor != chess[x][y]) { // 시작 색깔이랑 다음 색깔이랑 다르면 ok -> 정상
+                        if (startColor != chess[x][y]) { 
                             result++;
                         }
 
