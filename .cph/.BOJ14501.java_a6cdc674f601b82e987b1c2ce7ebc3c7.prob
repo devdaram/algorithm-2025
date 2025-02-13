@@ -1,1 +1,0 @@
-{"name":"Local: BOJ14501","url":"/Users/juyeong/vsCode/algorithm-2025/BOJ14501.java","tests":[{"id":1739452964452,"input":"7\n3 10\n5 20\n1 10\n1 20\n2 15\n4 40\n2 200","output":"45"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/juyeong/vsCode/algorithm-2025/BOJ14501.java","group":"local","local":true}
