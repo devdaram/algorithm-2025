@@ -28,9 +28,7 @@ public class BOJ14501 {
         if (startDay > N + 1)
             return;
         if (startDay == N + 1) {
-            if (result < money) {
-                result = money;
-            }
+            result = Math.max(result, money);
             return;
         }
 
