@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class BOJ2578 {
 
     static int[][] binggo = new int[5][5];
     static int binggoCount = 0;
@@ -84,7 +84,7 @@ public class Main {
             if (binggo[j][4 - j] == 0) // 대각선 하나씩
                 count++;
         }
-        
+
         if (count == 5)
             binggoCount++;
 
