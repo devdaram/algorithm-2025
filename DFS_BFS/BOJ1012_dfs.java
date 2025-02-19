@@ -1,3 +1,5 @@
+package DFS_BFS;
+
 import java.util.*;
 
 public class BOJ1012_dfs {
