@@ -33,23 +33,26 @@ public class BOJ1260 {
         Stack<Integer> stack = new Stack<Integer>();
         stack.push(V);
         dfs_stack(stack);
+
+        dfs_recursive(V);
         System.out.println();
+
         Queue<Integer> queue = new LinkedList<Integer>();
         queue.add(V);
         bfs(queue);
 
     }
 
-    // public static void dfs_recycle(int start) { //재귀
-    // if(){
-    // return;
-    // }
-    // for(int i = 1; i<=N; i++){
+    public static void dfs_recursive(int start) { // 재귀
+        visited_dfs[start] = 1;
+        System.out.print(start + " ");
 
-    // if(visited)
-    // dfs_recycle()
-    // }
-    // }
+        for (int i = 1; i <= N; i++) {
+            if (arr[start][i] == 1 && visited_dfs[i] == 0) {
+                dfs_recursive(i);
+            }
+        }
+    }
 
     public static void dfs_stack(Stack<Integer> stack) {
         while (!stack.isEmpty()) {
