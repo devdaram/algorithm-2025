@@ -29,22 +29,10 @@ public class BOJ2579_topdown {
     }
 
     public static int memo(int start) {
-        if (start == 0) {
-            dp[start] = 0;
-            return dp[start];
-        }
-        if (start == 1) {
-            dp[start] = score[start];
-            return dp[start];
-        }
-        if (start == 2) {
-            dp[start] = score[1] + score[2];
-            return dp[start];
-        }
 
         if (dp[start] > 0)
-            return dp[start];
-        dp[start] = Math.max(memo(start - 2) + score[start], memo(start - 3) + score[start - 1] + score[start]);
+            // return dp[start];
+            dp[start] = Math.max(memo(start - 2) + score[start], memo(start - 3) + score[start - 1] + score[start]);
 
         return dp[start];
     }
