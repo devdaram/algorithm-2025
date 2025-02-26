@@ -14,17 +14,26 @@ public class BOJ1463 {
         dp[0] = 0;
         dp[1] = 0;
         System.out.println(memo(N));
+
+        System.out.println(bottomUp(N));
     }
 
-    // public static Integer bottomUp(int N) {
-    // dp[0] = 0;
-    // dp[1] = 1;
+    public static Integer bottomUp(int N) {
+        dp[0] = 0;
+        dp[1] = 0;
 
-    // for (int i = 2; i <= N; i++) {
-    // dp[i] = Math.min()
-    // }
+        for (int i = 2; i <= N; i++) {
+            dp[i] = dp[i - 1] + 1;
+            if (i % 2 == 0) {
+                dp[i] = Math.min(dp[i], dp[i / 2] + 1);
+            }
+            if (i % 3 == 0) {
+                dp[i] = Math.min(dp[i / 3] + 1, dp[i]);
+            }
 
-    // }
+        }
+        return dp[N];
+    }
 
     public static Integer memo(int N) {
 
@@ -41,7 +50,6 @@ public class BOJ1463 {
         }
 
         return dp[N];
-
     }
 
 }// class end
