@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class BOJ2748 {
+public class BOJ2748_topdown {
 
     static Long[] dp;
 
